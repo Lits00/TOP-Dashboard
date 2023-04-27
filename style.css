@@ -19,7 +19,7 @@ main{
     width: 100vw;
     display: grid;
     grid-template-columns: repeat(1, minmax(150px, 15vw)) repeat(1, minmax(500px, 85vw));
-    grid-template-rows: repeat(1, 20vh) repeat(2, 80vh);
+    grid-template-rows: repeat(1, 18vh) repeat(1, 82vh);
     overflow: auto;
 }
 
@@ -101,7 +101,7 @@ main{
     grid-area: 1/1/3/2;
     display: grid;
     padding: 1rem;
-    grid-template-rows: 10% 40% 60%;
+    grid-template-rows: 10% 40% auto;
 }
 
 .dash-btn{
@@ -114,7 +114,7 @@ main{
 .selections, .settings{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(auto-fill, 40px);
+    grid-template-rows: repeat(auto-fit, 40px);
     place-items: start;
 }
 
@@ -128,4 +128,43 @@ main{
 .main-content{
     background-color: var(--gray);
     grid-area: 2/2/3/3;
+    padding: 1.5rem 1.5rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 76%) repeat(1, 21%);
+    grid-template-rows: repeat(2, 50%);
+    gap: 2% 3%;
+}
+
+.projects{
+    grid-area: 1/1/3/2;
+    display: grid;
+    grid-template-rows: 6% 94%;
+}
+
+/* .announcements{
+
+}
+
+.trending{
+
+} */
+
+/* .content-header{
+    margin-bottom: .5rem;
+} */
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 3%;
+    column-gap: 2%;
+}
+
+.project-items{
+    padding: 2rem 1rem 1rem;
+}
+
+.project-items, .info-container, .trend-container{
+    background-color: var(--white);
+    border-radius: .5rem;
 }
