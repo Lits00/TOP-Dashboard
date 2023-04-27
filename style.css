@@ -23,10 +23,76 @@ main{
     overflow: auto;
 }
 
+/* Button effects */
+.btn{
+    background-color: inherit;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
 /* HEADER */
 .header{
     background-color: var(--white);
     grid-area: 1/2/2/3;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 40% 60%;
+    padding: 1rem 2rem;
+}
+
+.top-left{
+    grid-area: 1/1/2/2;
+    margin: auto 0;
+}
+
+#searchbar{
+    height: 1.5rem;
+    width: 90%;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--gray);
+    margin-left: 1rem;
+}
+
+.top-right{
+    grid-area: 1/2/2/3;
+    align-items: center;
+    justify-items: center;
+}
+
+.top-right, .bottom-right{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.bottom-right{
+    place-items: center;
+}
+
+.profile-name1{
+    font-size: 1rem;
+}
+
+.greetings{
+    font-size: .8rem;
+    display: block;
+}
+
+.profile-name2{
+    font-size: 1.5rem;
+}
+
+.header-btn{
+    background-color: var(--blue) !important;
+    border-radius: 1rem;
+    color: var(--white);
+    height: 50%;
+    width: 70%;
 }
 
 /* DASHBOARD */
@@ -53,18 +119,9 @@ main{
 }
 
 .side-btn{
-    background-color: inherit;
-    border: none;
     color: var(--white);
     font-weight: bold;
     font-size: 1rem;
-    padding: 0;
-    transition: transform 0.3s ease-in-out;
-}
-
-.side-btn:hover{
-    cursor: pointer;
-    transform: scale(1.2);
 }
 
 /* MAINT CONTENT */
