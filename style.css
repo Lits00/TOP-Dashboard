@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+--blue: #0ea5e9;
+--orange: #f59e0b;
+--white: #f8fafc;
+--gray: #e2e8f0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(150px, 15vw)) repeat(1, minmax(500px, 85vw));
+    grid-template-rows: repeat(1, 20vh) repeat(2, 80vh);
+    overflow: auto;
+}
+
+/* HEADER */
+.header{
+    background-color: var(--white);
+    grid-area: 1/2/2/3;
+}
+
+/* DASHBOARD */
+.sidebar{
+    background-color: var(--blue);
+    grid-area: 1/1/3/2;
+    display: grid;
+    padding: 1rem;
+}
+
+/* MAINT CONTENT */
+.main-content{
+    background-color: var(--gray);
+    grid-area: 2/2/3/3;
+}
