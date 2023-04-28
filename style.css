@@ -15,12 +15,9 @@
 }
 
 main{
-    height: 100vh;
-    width: 100vw;
     display: grid;
-    grid-template-columns: repeat(1, minmax(150px, 15vw)) repeat(1, minmax(500px, 85vw));
-    grid-template-rows: repeat(1, 18vh) repeat(1, 82vh);
-    overflow: auto;
+    grid-template-columns: repeat(1, minmax(200px, 15vw)) repeat(1, minmax(500px, 85vw));
+    grid-template-rows: repeat(1, 18vh) repeat(1, minmax(82vh, auto));
 }
 
 /* Button effects */
@@ -52,11 +49,12 @@ main{
 
 #searchbar{
     height: 1.5rem;
-    width: 90%;
+    width: 85%;
     border: none;
     border-radius: 1rem;
     background-color: var(--gray);
     margin-left: 1rem;
+    padding: 1rem;
 }
 
 .top-right{
@@ -84,7 +82,7 @@ main{
 }
 
 .profile-name2{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .header-btn{
@@ -99,9 +97,16 @@ main{
 .sidebar{
     background-color: var(--blue);
     grid-area: 1/1/3/2;
-    display: grid;
     padding: 1rem;
-    grid-template-rows: 10% 40% auto;
+}
+
+.sticky{
+    position: sticky;
+    top: 1rem;
+}
+
+.dashboard-logo{
+    margin-bottom: 2rem;
 }
 
 .dash-btn{
@@ -113,8 +118,7 @@ main{
 
 .selections, .settings{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(auto-fit, 40px);
+    margin-bottom: 2rem;
     place-items: start;
 }
 
@@ -122,6 +126,7 @@ main{
     color: var(--white);
     font-weight: bold;
     font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* MAINT CONTENT */
@@ -130,41 +135,56 @@ main{
     grid-area: 2/2/3/3;
     padding: 1.5rem 1.5rem 1rem 1rem;
     display: grid;
-    grid-template-columns: repeat(1, 76%) repeat(1, 21%);
-    grid-template-rows: repeat(2, 50%);
-    gap: 2% 3%;
-}
-
-.projects{
-    grid-area: 1/1/3/2;
-    display: grid;
-    grid-template-rows: 6% 94%;
-}
-
-/* .announcements{
-
-}
-
-.trending{
-
-} */
-
-/* .content-header{
-    margin-bottom: .5rem;
-} */
-
-.project-container{
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    row-gap: 3%;
-    column-gap: 2%;
-}
-
-.project-items{
-    padding: 2rem 1rem 1rem;
+    grid-template-columns: repeat(1, 71%) repeat(1, 27%);
+    gap: 2%;
 }
 
 .project-items, .info-container, .trend-container{
     background-color: var(--white);
     border-radius: .5rem;
+}
+
+.content-header{
+    margin-bottom: .5rem;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2%;
+    height: calc(96.5%);
+}
+
+.project-items{
+    padding: 2rem 1rem;
+}
+
+.info-container{
+    padding: 1.5rem;
+}
+
+.info-items{
+    margin: 1rem .5rem;
+}
+
+.trending{
+    margin-top: 2rem;
+}
+
+.trend-container{
+    display: grid;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.trend-items{
+    display: grid;
+    margin: 1rem;
+}
+
+.trend-txt{
+    display: block;
+    font-weight: lighter;
+    font-size: .8rem;
+    color: rgba(0, 0, 0, .7);
 }
