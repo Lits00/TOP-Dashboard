@@ -144,15 +144,17 @@ main{
     border-radius: .5rem;
 }
 
-.content-header{
-    margin-bottom: .5rem;
-}
-
 .project-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-rows: 1.3rem repeat(auto-fit, 200px); */
+    /* grid-template-rows: auto; */
+    grid-template-rows: 1rem repeat(auto-fill, minmax(200px, 1fr));
     gap: 2%;
-    height: calc(96.5%);
+}
+
+.proj-header{
+    grid-column: 1/-1;
 }
 
 .project-items{
@@ -167,8 +169,14 @@ main{
     margin: 1rem .5rem;
 }
 
-.trending{
-    margin-top: 2rem;
+.main-right{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.announce-trend{
+    margin-bottom: 1rem;
 }
 
 .trend-container{
