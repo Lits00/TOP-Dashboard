@@ -44,7 +44,8 @@ main{
 
 .top-left{
     grid-area: 1/1/2/2;
-    margin: auto 0;
+    display: flex;
+    align-items: center;
 }
 
 #searchbar{
@@ -59,16 +60,15 @@ main{
 
 .top-right{
     grid-area: 1/2/2/3;
-    align-items: center;
-    justify-items: center;
-}
-
-.top-right, .bottom-right{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
+    display: flex;
+    justify-content: space-evenly; 
+    /* align-items: center;
+    justify-items: center; */
 }
 
 .bottom-right{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     place-items: center;
 }
 
@@ -105,28 +105,38 @@ main{
     top: 1rem;
 }
 
-.dashboard-logo{
+.dash{
     margin-bottom: 2rem;
 }
 
-.dash-btn{
+.button-icon{
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.dashboard{
     text-decoration: none;
-    color: var(--white);
     font-size: 1.3rem;
+}
+
+.dash-btn{
+    color: var(--white);
     font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .selections, .settings{
     display: grid;
     margin-bottom: 2rem;
     place-items: start;
+    gap: 1rem;
 }
 
 .side-btn{
-    color: var(--white);
-    font-weight: bold;
     font-size: 1rem;
-    margin-bottom: 1rem;
 }
 
 /* MAINT CONTENT */
